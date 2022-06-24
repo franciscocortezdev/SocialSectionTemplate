@@ -1,12 +1,284 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 :root{
-  --DarkMagenta: hsl(300, 43%, 22%)
-  --SoftPink: hsl(333, 80%, 67%)
-  --DarkGrayish: hsl(303, 10%, 53%)
-  --LightGrayish: hsl(300, 24%, 96%)
-  --White: hsl(0, 0%, 100%)
+  --DarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayish: hsl(303, 10%, 53%);
+  --LightGrayish: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+  
+
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 body{
   font-family: 'League Spartan', sans-serif;
+  background-color: var(--LightGrayish);
+  font-size: 15px;
+  
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container{
+  box-sizing: border-box;
+  max-width: 1440px;
+  
+  background-color: var(--White);
+  border-radius: .5rem;
+  box-shadow: 0 0px 10px var(--DarkGrayish);
+  padding: 4rem 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  
+}
+.backgroundImgRight{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.backgroundImgLeft{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.backgroundRight,
+.backgroundLeft{
+  display: none;
+}
+
+.section1{
+  width: 50%;
+
+}
+.section1 h1{
+  font-size: 3rem;
+  width: 60%;
+  color: var(--DarkMagenta);
+  margin-bottom: 1rem;
+  
+}
+.section1 p{
+  font-size: 1rem;
+  width: 70%;
+  color: var(--DarkMagenta);
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.section2{
+  width: 50%;
+  
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  gap: 1rem;
+}
+.section2_rate1,
+.section2_rate2,
+.section2_rate3{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--LightGrayish);
+  border-radius: .5rem;
+  color: var(--DarkMagenta);
+  font-weight: 700;
+  font-size: 1rem;
+ 
+}
+
+
+
+.section2_rate1_starts,
+.section2_rate2_starts,
+.section2_rate3_starts{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .2rem;
+}
+.section2_rate1{
+  align-self: flex-start;
+}
+.section2_rate2{
+  align-self: center;
+}
+.section2_rate3{
+  align-self: flex-end;
+}
+
+.section3{
+  width: 100%;
+  min-height: 335px;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+.section3_article1,
+.section3_article2,
+.section3_article3{
+  background-color: var(--DarkMagenta);
+  padding: 2rem;
+  border-radius: .5rem;
+}
+
+.section3_article1 p,
+.section3_article2 p,
+.section3_article3 p{
+  color: var(--White);
+  text-align: justify;
+  line-height: 1.5rem;
+ 
+}
+
+.section3_article1_head,
+.section3_article2_head,
+.section3_article3_head{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.section3_article1_head img,
+.section3_article2_head img,
+.section3_article3_head img{
+  border-radius: 50%;
+}
+
+.section3_article1_name p:nth-child(1),
+.section3_article2_name p:nth-child(1),
+.section3_article3_name p:nth-child(1){
+  color: var(--White);
+  line-height: 1rem;
+  margin-bottom: .8rem;
+}
+.section3_article1_name p:nth-child(2),
+.section3_article2_name p:nth-child(2),
+.section3_article3_name p:nth-child(2){
+  color: var(--SoftPink);
+  line-height: 1rem;
+}
+
+.section3_article1{
+  align-self: flex-start;
+}
+.section3_article2{
+  align-self: center;
+}
+.section3_article3{
+  align-self: flex-end;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .container{
+ 
+    padding: 4rem 1rem;
+  }
+  .section1 h1{
+    font-size: 2rem;
+    width: 95%;
+  }
+  .section1 p{
+    font-size: 1rem;
+    width: 95%;
+    
+  }
+  .section2_rate1,
+  .section2_rate2,
+  .section2_rate3{
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  .section2_rate1 p,
+  .section2_rate2 p,
+  .section2_rate3 p{
+    white-space: nowrap;
+  }
+
+}
+
+
+@media screen and (max-width: 767px){
+
+  .container{
+    padding: 40px 20px;
+    height: 100%;
+    
+  }
+  
+  .section1,
+  .section2,
+  .section3{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .section1 h1{
+    width: 100%;
+    text-align: center;
+  }
+  .section1 p{
+    width: 100%;
+    text-align: center;
+  }
+  
+  .section2_rate1,
+  .section2_rate2,
+  .section2_rate3{
+    box-sizing: border-box;
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+  .section2_rate1 p,
+  .section2_rate2 p,
+  .section2_rate3 p{
+    text-align: center;
+  }
+  .section3{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .backgroundImgRight,
+  .backgroundImgLeft{
+    display: none;
+  }
+  .backgroundRight{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+  .backgroundLeft{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+  }
+
 
 }
